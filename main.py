@@ -11,7 +11,7 @@ email = input("Inserisci la mail: ") # User writes his email
 month = input("Inserisci un mese (tra 01 e 12): ") # User writes the month
 day = input("Inserisci un giorno (tra 01 e 31): ") # User writes the day
 
-stringWrap = str(random_number_one) + '|' + str(random_number_two) + '|2022-' + str(month) + '-' + str(day) + '|UNINA\\' + email # Wraps every information into a single variable
+stringWrap = f"{random_number_one}|{random_number_two}|2022-{month}-{day}|UNINA\\{email}" # Wraps every information into a single variable
 data = qrcode.make(stringWrap) # Creates the QRCode (I think at least)
 
 # From now on I just brutally copy-pasted everything
