@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # QR Code generated
-sample.png
+*.png
