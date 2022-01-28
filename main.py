@@ -10,8 +10,9 @@ email_list = [] # Initializing email list
 month = [] # Initializing month list
 day = [] # Initializing day list
 
+# TODO controllare che nella mail sia presente un solo punto
 while repeat != 'n': # Do while-ish loop
-    email_list.append(input("Inserisci la mail: ")) # Loading several email in a list
+    email_list.append(input("Inserisci la mail (nome.cognome): ")) # Loading several email in a list
     repeat = input("Vuoi generare un QR Code anche per un'altra mail?\nRisposta: ") # The users says if he wants to load another email or not
 
 for email in email_list: # For each loop used to iterate through every email
