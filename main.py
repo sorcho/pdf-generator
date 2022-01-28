@@ -18,7 +18,7 @@ for email in email_array:
 
     print(f"Utente: {email}")
 
-    while repeat != 'n':
+    while repeat != 'n': # TODO controllare l'effettiva esistenza della data
         month.append(input("Inserisci un mese (tra 01 e 12): ")) # User writes the month
         day.append(input("Inserisci un giorno (tra 01 e 31): ")) # User writes the day
 
@@ -34,3 +34,5 @@ for email in email_array:
         surname = email.split('.') # Saves in an array the name and the surname
         
         data.save(f"QRCodes\\{surname[1]}[2022-{month[i]}-{day[i]}].png") # Saves the QRCode as a png with the surname and the date in a folder called QRCodes
+
+# TODO aggiungere una funzione che ridimensiona le immagini
