@@ -1,5 +1,6 @@
 # In order to import every library needed run the following command "pip install -r requirements.txt"
 
+import os
 import random # Imported random library
 import qrcode # Imported qrcode library
 from PIL import Image # Imported Image library from PILLOW
@@ -14,6 +15,8 @@ while repeat != 'n':
     repeat = input("Vuoi generare un QR Code anche per un'altra mail?\nRisposta: ")
 
 for email in email_array:
+    os.system('cls')
+    
     repeat = 's'
 
     print(f"Utente: {email}")
