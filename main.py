@@ -16,11 +16,8 @@ while repeat != 'n':
 for email in email_array:
     repeat = 's'
 
-    random_number_one = random.randint(1000,9999) # Generate first 4 digit string
-    random_number_two = random.randint(1000,9999) # Generate second 4 digit string
-
     print(f"Utente: {email}")
-    
+
     while repeat != 'n':
         month.append(input("Inserisci un mese (tra 01 e 12): ")) # User writes the month
         day.append(input("Inserisci un giorno (tra 01 e 31): ")) # User writes the day
@@ -28,6 +25,9 @@ for email in email_array:
         repeat = input(f"Vuoi inserire un'altra data per l'utente {email}?\nRisposta: ")
 
     for i in range(len(month)):
+        random_number_one = random.randint(1000,9999) # Generate first 4 digit string
+        random_number_two = random.randint(1000,9999) # Generate second 4 digit string
+        
         string_wrap = f"{random_number_one}|{random_number_two}|2022-{month[i]}-{day[i]}|UNINA\\{email}" # Wraps every information into a single variable
         data = qrcode.make(string_wrap) # Creates the QRCode (I think at least)
 
