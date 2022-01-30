@@ -15,19 +15,17 @@ while repeat != 'n': # Do while-ish loop
     email_list.append(input("Inserisci la mail (nome.cognome): ")) # Loading several email in a list
     repeat = input("Vuoi generare un QR Code anche per un'altra mail?\nRisposta: ") # The users says if he wants to load another email or not
 
+repeat = 's' # Re-initializing the char to 's' since another do while kinda loop is used in line :24
+
+# TODO controllare l'effettiva esistenza della data
+while repeat != 'n': # The other do while loop
+    month.append(input("Inserisci un mese (tra 01 e 12): ")) # User writes the month
+    day.append(input("Inserisci un giorno (tra 01 e 31): ")) # User writes the day
+
+    repeat = input(f"Vuoi inserire un'altra data?\nRisposta: ") # Again, the program asks the user if he wants to load more months and days
+
 for email in email_list: # For each loop used to iterate through every email
     os.system('cls') # Clears the terminal
-    
-    repeat = 's' # Re-initializing the char to 's' since another do while kinda loop is used in line :24
-
-    print(f"Utente: {email}") # Prints the user currently loaded
-
-    # TODO controllare l'effettiva esistenza della data
-    while repeat != 'n': # The other do while loop
-        month.append(input("Inserisci un mese (tra 01 e 12): ")) # User writes the month
-        day.append(input("Inserisci un giorno (tra 01 e 31): ")) # User writes the day
-
-        repeat = input(f"Vuoi inserire un'altra data per l'utente {email}?\nRisposta: ") # Again, the program asks the user if he wants to load more months and days
 
     for i in range(len(month)):
         random_number_one = random.randint(1000,9999) # Generate first 4 digit string
