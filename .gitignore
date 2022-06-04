@@ -1,2 +1,5 @@
 prenotazione.pdf
 __pycache__/
+venv/
+.idea/
+PDF/*.pdf
