@@ -66,12 +66,16 @@ def genera_qrcodes(giorno_, mese_, email_):
 
 def genera_canvas(giorno_, mese_, email_):
     c = canvas.Canvas("base.pdf")
-    y = 615
+    i = 0
 
     for email in email_:
+        y = 615
+        
         for (giorno, mese) in zip(giorno_, mese_):
             c.drawImage(f"{email}-{mese}-{giorno}.png", 470, y)
             y -= 100
+            i += 1
+    print(i)
     c.save()
 
 
